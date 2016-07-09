@@ -18,14 +18,27 @@
 <body>
 	<div id="mainDiv">
 		<div id="content">
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Zena, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Bell</div>
+					</div>
+				</div>
+			</div>
 			<div id="code">
 				<span class="comments">/**</span><br />
-				<span class="space"/><span class="comments">* We are both Fudan SSers and programmers,</span><br />
-				<span class="space"/><span class="comments">* so I write some code to celebrate our 1st anniversary.</span><br />
+				<span class="space"/><span class="comments">* I am a programmer,</span><br />
+				<span class="space"/><span class="comments">* so I write some code to celebrate your birthday.</span><br />
 				<span class="space"/><span class="comments">*/</span><br />
-				Boy i = <span class="keyword">new</span> Boy(<span class="string">"hackerzhou"</span>);<br />
-				Girl u = <span class="keyword">new</span> Girl(<span class="string">"MaryNee"</span>);<br />
-				<span class="comments">// Nov 2, 2010, I told you I love you. </span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Bell"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Zena"</span>);<br />
+				<span class="comments">// 6 15, 2015, Our first date. </span><br />
 				i.love(u);<br />
 				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
 				u.accepted();<br />
@@ -39,38 +52,26 @@
 				<span class="keyword">while</span> (isHesitate) {<br />
 				<span class="placeholder"/>i.waitFor(u);<br />
 				<span class="placeholder"/><span class="comments">// I think it is an important decision</span><br />
-				<span class="placeholder"/><span class="comments">// and you should think it over.</span><br />
+				<span class="placeholder"/><span class="comments">// and you should think it more.</span><br />
+				<span class="placeholder"/><span class="comments">// you think it over One day in the future.</span><br />
 				<span class="placeholder"/>isHesitate = u.thinkOver();<br />
 				}<br />
 				<span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
 				i.marry(u);<br />
 				i.liveHappilyWith(u);<br />
 			</div>
-			<div id="loveHeart">
-				<canvas id="garden"></canvas>
-				<div id="words">
-					<div id="messages">
-						Minyue, I have fallen in love with you for
-						<div id="elapseClock"></div>
-					</div>
-					<div id="loveu">
-						Love u forever and ever.<br/>
-						<div class="signature">- hackerzhou</div>
-					</div>
-				</div>
-			</div>
+			<audio autoplay>
+				<source src="audios/chang-tui-shu-shu.mp3" type="audio/mpeg">
+			</audio>
 		</div>
-		<div id="copyright">
-			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
-			Copyright © 2011 <a href='http://hackerzhou.me'>hackerzhou.me</a> 2009-2011
-		</div>
+		<!--Minyue, I have fallen-->
 	</div>
 	<script type="text/javascript">
-		var offsetX = $("#loveHeart").width() / 2;
+		var offsetX = $("#loveHeart").width() / 2 ;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date();
-		together.setFullYear(2010, 10, 2);
-		together.setHours(20);
+		together.setFullYear(2014, 6, 15);
+		together.setHours(14);
 		together.setMinutes(0);
 		together.setSeconds(0);
 		together.setMilliseconds(0);
@@ -80,21 +81,20 @@
 			msg.id = "errorMsg";
 			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
 			document.body.appendChild(msg);
-			$("#code").css("display", "none")
-			$("#copyright").css("position", "absolute");
-			$("#copyright").css("bottom", "10px");
+			$("#code").css("display", "none");
 		    document.execCommand("stop");
 		} else {
-			setTimeout(function () {
-				startHeartAnimation();
-			}, 5000);
+			startHeartAnimation();
+//			setTimeout(function () {
+//				startHeartAnimation();
+//			}, 5000);
 
 			timeElapse(together);
-			setInterval(function () {
-				timeElapse(together);
-			}, 500);
+//			setInterval(function () {
+//				timeElapse(together);
+//			}, 500);
 
-			adjustCodePosition();
+//			adjustCodePosition();
 			$("#code").typewriter();
 		}
 	</script>
